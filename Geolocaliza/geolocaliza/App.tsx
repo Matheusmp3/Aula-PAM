@@ -27,8 +27,8 @@ export default function App() {
   useEffect(() => {
     watchPositionAsync({
       accuracy: LocationAccuracy.Highest,
-      TimeIntervel: 1000,
-      distanceIntervel: 1
+      timeInterval: 1000,
+      distanceInterval: 1
     }, (response) => {
       console.log("Nova localização: ", response);
       setLocation(response);
@@ -55,8 +55,8 @@ export default function App() {
         latitude: location.coords.latitude,
         longitude: location.coords.longitude,
         latitudeDelta: 0.005,
-        longitudeDelta: 0.005. 
-        }}>
+        longitudeDelta: 0.005, 
+      }}>
 
       <Marker
       coordinate={{
